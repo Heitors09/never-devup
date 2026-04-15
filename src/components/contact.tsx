@@ -21,20 +21,20 @@ export const Contact = () => {
 			<div className="flex max-md:flex-col gap-4 justify-between">
 				<aside className="w-full  flex flex-col gap-4">
 					<div className="bg-white/10 flex flex-col max-md:items-center  w-full md:grid md:grid-cols-2 gap-8 rounded-[8px] p-8">
-						<div className="flex max-md:flex-col items-center gap-4">
+						<a target="_blank" rel="noopener noreferrer" href="https://wa.me/558586598249?text=quero%20iniciar%20um%20projeto%20para%20o%20meu%20neg%C3%B3cio" className="flex max-md:flex-col items-center gap-4 hover:bg-white/5 p-2 rounded-lg transition-colors">
 						 <Contact2 className="size-10 text-[#C7F900]"/>
 							<p className="text-white/70 max-md:text-center text-lg flex flex-col text-sm font-medium tracking-wide uppercase">
 								WhatsApp
-								<span>88 8888-8888</span>
+								<span className="text-white font-bold">(85) 8659-8249</span>
 							</p>
-						</div>
-						<div className="flex max-md:flex-col items-center gap-4">
+						</a>
+						<a href="mailto:neverdevup73@gmail.com" className="flex max-md:flex-col items-center gap-4 hover:bg-white/5 p-2 rounded-lg transition-colors">
 							<MailIcon className="size-10 text-[#C7F900]"/>
 							<p className="text-white/70 max-md:text-center text-lg flex flex-col text-sm font-medium tracking-wide uppercase">
 								Email
-								<span>contato@contato.com</span>
+								<span className="text-white font-bold">neverdevup73@gmail.com</span>
 							</p>
-						</div>
+						</a>
 						<div className="flex max-md:flex-col items-center gap-4">
 							<Camera className="size-10 text-[#C7F900]"/>
 							<p className="text-white/70 max-md:text-center text-lg flex flex-col text-sm font-medium tracking-wide uppercase">

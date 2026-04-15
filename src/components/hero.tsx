@@ -1,4 +1,4 @@
-import { ChevronDown } from "lucide-react";
+import { ChevronRight } from "lucide-react";
 import { motion } from "motion/react";
 import { Highlighter } from "./magicui/highlighter";
 
@@ -26,11 +26,12 @@ export const Hero = () => {
 						Email, WhatsApp e TikTok
 					</p>
 					<a
-						href="#contato"
+						target="_blank" rel="noopener noreferrer"
+						href="https://wa.me/558586598249?text=quero%20iniciar%20um%20projeto%20para%20o%20meu%20neg%C3%B3cio"
 						className="md:w-52 bg-lime-600 flex font-bold text-primary-foreground hover:cursor-pointer shadow-xs hover:bg-lime-500/90 rounded-[8px] gap-2 items-center justify-center w-full h-12"
 					>
 						<p>Contate-nos</p>
-						<ChevronDown className="size-5" />
+						<ChevronRight className="size-4" />
 					</a>
 				</div>
 			</main>

@@ -3,18 +3,18 @@ import { Highlighter } from "./magicui/highlighter";
 
 export const RetailPromo = () => {
 	return (
-		<div className=" w-full">
-			<div className="rounded-[8px] px-5 md:px-12 lg:px-32 bg-gradient-to-tr from-[#0D1B2A] to-[#0F2233] py-24 w-full relative">
+		<div id="oferta" className=" w-full px-4 sm:px-5 md:px-12 lg:px-32">
+			<div className="rounded-[8px] bg-gradient-to-tr from-[#0D1B2A] to-[#0F2233] py-10 px-6 md:py-24 md:px-12 w-full relative overflow-hidden">
 				<div
-					className="absolute -top-1 right-30 flex flex-col items-center gap-2 bg-lime-600 text-white font-black text-sm uppercase tracking-wider shadow-xl shadow-lime-700/50 px-8 pt-4 pb-14 z-10 rotate-[1deg]"
+					className="absolute -top-1 right-2 sm:right-10 md:right-30 flex flex-col items-center gap-1 sm:gap-2 bg-lime-600 text-white font-black text-[9px] sm:text-sm uppercase tracking-wider shadow-xl shadow-lime-700/50 px-3 sm:px-8 pt-3 sm:pt-4 pb-8 sm:pb-14 z-10 rotate-[1deg]"
 					style={{ clipPath: "polygon(0% 0%, 100% 0%, 100% 70%, 50% 100%, 0% 70%)" }}
 				>
-					<div className="w-3.5 h-3.5 rounded-full bg-lime-800 border-2 border-lime-900/80 flex-shrink-0" />
-					<Sparkles className="size-5 flex-shrink-0" />
-					<span className="whitespace-nowrap text-center leading-tight">Oferta<br/>Especial</span>
+					<div className="w-1.5 h-1.5 sm:w-3.5 sm:h-3.5 rounded-full bg-lime-800 border-2 border-lime-900/80 flex-shrink-0" />
+					<Sparkles className="size-3 sm:size-5 flex-shrink-0" />
+					<span className="whitespace-nowrap text-center leading-tight text-[7px] sm:text-sm">Oferta<br/>Especial</span>
 				</div>
-				<h2 className="text-3xl md:text-4xl font-bold mb-4 text-white/90">
-				Sua marca de moda, crie sua <Highlighter  isView action="underline" color="#84cc16">loja virtual </Highlighter> sob medida.
+				<h2 className="text-xl sm:text-2xl md:text-4xl font-bold mb-4 text-white/90 leading-tight pr-12 sm:pr-0">
+				Sua marca de moda, crie sua <Highlighter isView action="underline" color="#84cc16">loja virtual </Highlighter> sob medida.
 				</h2>
 
 				<p className="text-white/70 max-w-2xl text-sm md:text-base mb-10 leading-relaxed">
@@ -48,7 +48,8 @@ export const RetailPromo = () => {
 				</div>
 				<div className="mt-10 flex justify-end">
 					<a
-						href="#contato"
+						target="_blank" rel="noopener noreferrer"
+						href="https://wa.me/558592248448?text=quero%20come%C3%A7ar%20um%20projeto%20para%20minha%20loja"
 						className="inline-flex items-center gap-2 bg-lime-600 font-bold text-primary-foreground hover:cursor-pointer shadow-xs hover:bg-lime-500/90 rounded-[8px] px-8 h-12"
 					>
 						<p>Quero criar minha loja</p>
