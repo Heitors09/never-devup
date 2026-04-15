@@ -1,4 +1,4 @@
-import { Clock, Globe, MessageCircle } from "lucide-react";
+import { Camera, Clock, Contact2, Globe, MailIcon, MessageCircle, Smartphone } from "lucide-react";
 import { AnimatedListComponent } from "./magicui/animate-list-component";
 import { Highlighter } from "./magicui/highlighter";
 
@@ -22,44 +22,28 @@ export const Contact = () => {
 				<aside className="w-full  flex flex-col gap-4">
 					<div className="bg-white/10 flex flex-col max-md:items-center  w-full md:grid md:grid-cols-2 gap-8 rounded-[8px] p-8">
 						<div className="flex max-md:flex-col items-center gap-4">
-							<img
-								alt="logo"
-								className="rounded-[8px] size-16"
-								src="contact.png"
-							/>
+						 <Contact2 className="size-10 text-[#C7F900]"/>
 							<p className="text-white/70 max-md:text-center text-lg flex flex-col text-sm font-medium tracking-wide uppercase">
 								WhatsApp
 								<span>88 8888-8888</span>
 							</p>
 						</div>
 						<div className="flex max-md:flex-col items-center gap-4">
-							<img
-								alt="logo"
-								className="rounded-[8px] size-16"
-								src="mail.png"
-							/>
+							<MailIcon className="size-10 text-[#C7F900]"/>
 							<p className="text-white/70 max-md:text-center text-lg flex flex-col text-sm font-medium tracking-wide uppercase">
 								Email
 								<span>contato@contato.com</span>
 							</p>
 						</div>
 						<div className="flex max-md:flex-col items-center gap-4">
-							<img
-								alt="logo"
-								className="rounded-[8px] size-16"
-								src="insta.png"
-							/>
+							<Camera className="size-10 text-[#C7F900]"/>
 							<p className="text-white/70 max-md:text-center text-lg flex flex-col text-sm font-medium tracking-wide uppercase">
 								Instagram
 								<span>instagram.com/instagram</span>
 							</p>
 						</div>
 						<div className="flex max-md:flex-col items-center gap-4">
-							<img
-								alt="logo"
-								className="rounded-[8px] size-16"
-								src="social.png"
-							/>
+							<Smartphone className="size-10 text-[#C7F900]"/>
 							<p className="text-white/70 max-md:text-center text-lg flex flex-col text-sm font-medium tracking-wide uppercase">
 								TikTok
 								<span>tiktok.com/contato</span>

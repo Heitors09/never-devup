@@ -3,6 +3,7 @@ import { Contact } from "./components/contact";
 import { Header } from "./components/header";
 import { Hero } from "./components/hero";
 import { Highlighter } from "./components/magicui/highlighter";
+import { RetailPromo } from "./components/retail-promo";
 import { Steps } from "./components/steps";
 
 function App() {
@@ -10,6 +11,7 @@ function App() {
 		<div className="text-white pb-12">
 			<Header />
 			<Hero />
+			<RetailPromo />
 			<Steps />
 			<Contact />
 			<div className="my-12 md:px-12  lg:px-32 px-5">

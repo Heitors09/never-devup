@@ -44,7 +44,7 @@ export const Hero = () => {
 				transition={{ duration: 1, ease: "easeOut" }}
 				className="xl:w-[50%] flex  rounded-[8px] items-center justify-center "
 			>
-				<img alt="logo" className="rounded-[8px] " src="webpage-2.png" />
+				<img alt="logo" className="rounded-[8px] " src="webproject.png" />
 			</motion.div>
 		</div>
 	);
