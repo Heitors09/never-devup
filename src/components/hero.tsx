@@ -4,7 +4,7 @@ import { Highlighter } from "./magicui/highlighter";
 
 export const Hero = () => {
 	return (
-		<div className="flex max-xl:flex-col-reverse max-xl:gap-12 px-5 md:px-12 lg:px-32 my-5  w-full">
+		<div className="flex max-xl:flex-col-reverse max-xl:gap-12 px-5 md:px-12 lg:px-32 w-full">
 			<main className="xl:w-[50%] flex flex-col justify-center gap-5">
 				<h2 className="lg:text-7xl text-3xl md:text-5xl w-auto leading-tight font-bold  text-white/90">
 					Desenvolvimento{" "}
@@ -28,7 +28,7 @@ export const Hero = () => {
 					<a
 						target="_blank" rel="noopener noreferrer"
 						href="https://wa.me/558586598249?text=quero%20iniciar%20um%20projeto%20para%20o%20meu%20neg%C3%B3cio"
-						className="md:w-52 bg-lime-600 flex font-bold text-primary-foreground hover:cursor-pointer shadow-xs hover:bg-lime-500/90 rounded-[8px] gap-2 items-center justify-center w-full h-12"
+						className="md:w-52 bg-lime-600 flex font-bold text-white hover:cursor-pointer shadow-lg shadow-lime-600/20 hover:bg-lime-500 rounded-[10px] gap-2 items-center justify-center w-full h-12 transition-all duration-300 hover:scale-105 active:scale-95"
 					>
 						<p>Contate-nos</p>
 						<ChevronRight className="size-4" />
@@ -43,9 +43,9 @@ export const Hero = () => {
 				initial="hidden"
 				animate="visible"
 				transition={{ duration: 1, ease: "easeOut" }}
-				className="xl:w-[50%] flex  rounded-[8px] items-center justify-center "
+				className="xl:w-[70%] flex  rounded-[8px] items-center justify-center "
 			>
-				<img alt="logo" className="rounded-[8px] " src="webproject.png" />
+				<img alt="logo" className="rounded-[8px]" src="note.png" />
 			</motion.div>
 		</div>
 	);
