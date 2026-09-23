@@ -90,16 +90,17 @@ export function Contact() {
 
 	return (
 		<Panel id="contato">
-			<div className="grid gap-10 lg:grid-cols-[1.15fr_0.85fr] lg:gap-12">
+			<div className="grid gap-6 lg:grid-cols-[1.15fr_0.85fr] lg:gap-12">
 				<Reveal className="order-2 lg:order-1">
 					<SectionHeading
 						align="left"
 						eyebrow="Contato"
 						title="Vamos conversar sobre o seu projeto"
+						short="WhatsApp ou e-mail. Resposta em até duas horas úteis."
 						text="Manda pelo formulário, WhatsApp ou e-mail. Em horário comercial, a resposta sai em até duas horas úteis."
 					/>
 
-					<form onSubmit={onSubmit} noValidate className="mt-8 grid gap-4">
+					<form onSubmit={onSubmit} noValidate className="mt-5 grid gap-3 md:mt-8 md:gap-4">
 						<div className="grid gap-4 sm:grid-cols-2">
 							<Field label="Nome" error={errors.name} htmlFor="nome">
 								<input
@@ -174,7 +175,7 @@ export function Contact() {
 
 						<button
 							type="submit"
-							className="inline-flex h-12 items-center justify-center rounded-full bg-brand-solid px-6 text-sm font-semibold text-white shadow-[0_10px_30px_-12px_rgba(98,99,241,0.85)] hover:brightness-110"
+							className="inline-flex h-12 w-full items-center justify-center rounded-full bg-brand-solid px-6 text-sm font-semibold text-white shadow-[0_10px_30px_-12px_rgba(98,99,241,0.85)] hover:brightness-110 sm:w-auto"
 						>
 							Enviar pelo WhatsApp
 						</button>
@@ -194,7 +195,7 @@ export function Contact() {
 				</Reveal>
 
 				<Reveal delay={0.08} className="order-1 lg:order-2">
-					<aside className="flex h-full flex-col gap-4 rounded-panel bg-muted p-5 md:p-6">
+					<aside className="flex h-full flex-col gap-3 rounded-panel bg-muted p-3.5 md:gap-4 md:p-6">
 						<h3 className="text-lg font-semibold">Canais</h3>
 						<div className="grid gap-2">
 							<Channel
@@ -237,6 +238,18 @@ export function Contact() {
 									</span>
 								</span>
 							</p>
+						</div>
+
+						<div className="min-h-40 flex-1 overflow-hidden rounded-2xl">
+							<img
+								src="/contact/ligacao.jpg"
+								alt="Pessoa sorrindo durante uma ligação, com um tablet na mão."
+								width={1400}
+								height={933}
+								loading="lazy"
+								decoding="async"
+								className="h-full w-full object-cover object-[center_28%]"
+							/>
 						</div>
 
 						<div className="mt-auto flex gap-2 pt-2">

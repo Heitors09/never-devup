@@ -3,10 +3,10 @@ import { Logo } from "./logo";
 
 export function Footer() {
 	return (
-		<footer className="pb-10">
-			<div className="mx-auto w-full max-w-6xl px-4 md:px-6">
-				<div className="flex flex-col gap-6 border-t border-border pt-8">
-					<div className="flex flex-col gap-5 sm:flex-row sm:items-center sm:justify-between">
+		<footer className="pb-8 md:pb-10">
+			<div className="mx-auto w-full max-w-6xl px-3 md:px-6">
+				<div className="flex flex-col gap-4 border-t border-border pt-6 md:gap-6 md:pt-8">
+					<div className="flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
 						<Logo />
 						<nav className="flex flex-wrap gap-x-5 gap-y-2" aria-label="Rodapé">
 							{nav.map((item) => (

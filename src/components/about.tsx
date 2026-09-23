@@ -1,21 +1,34 @@
-import { MessageCircle, Repeat, Route } from "lucide-react";
 import { Reveal } from "./reveal";
-import { Panel, SectionHeading } from "./section";
+import { MobileText, Panel, SectionHeading } from "./section";
 
 const points = [
 	{
-		icon: MessageCircle,
+		image: "/about/conversa.jpg",
+		alt: "Pessoa numa reunião online, com a chamada aberta no notebook.",
+		position: "object-[center_45%]",
 		title: "Conversa direta",
+		short: "Você fala com quem constrói.",
 		text: "Você fala com quem constrói. A ideia, o prazo e a dúvida chegam no mesmo time.",
 	},
 	{
-		icon: Route,
+		image: "/about/caminho.jpg",
+		alt: "Equipe organizando o caminho do projeto em notas na parede.",
+		position: "object-center",
 		title: "Caminho combinado",
-		text: "O que entra, a ordem de construção e o que fica para depois ficam claros antes de começar.",
+		short: "O caminho fica claro antes de começar.",
+		text: (
+			<>
+				<span className="block">O que entra e a ordem de construção.</span>
+				<span className="block">O depois fica claro antes de começar.</span>
+			</>
+		),
 	},
 	{
-		icon: Repeat,
+		image: "/about/lancamento.jpg",
+		alt: "Três pessoas usando um produto no notebook depois de publicado.",
+		position: "object-[center_42%]",
 		title: "Depois do lançamento",
+		short: "A primeira versão vai para o ar.",
 		text: "A primeira versão vai para o ar e o produto segue evoluindo com o uso real.",
 	},
 ];
@@ -23,32 +36,52 @@ const points = [
 export function About() {
 	return (
 		<Panel id="sobre">
-			<div className="grid items-center gap-10 lg:grid-cols-[1.1fr_0.9fr] lg:gap-16">
-				<Reveal>
-					<SectionHeading
-						align="left"
-						eyebrow="Sobre"
-						title="Do problema à tecnologia que resolve."
-						text="A Neverdevup escuta o que está travando o negócio e entrega a tecnologia que resolve: sistemas, inteligência artificial, automação, CRM e sites. O segmento muda. O jeito de trabalhar permanece: escutar, combinar o escopo e construir algo que as pessoas conseguem usar."
-					/>
-				</Reveal>
-				<div className="grid gap-3">
-					{points.map((point, index) => (
-						<Reveal key={point.title} delay={index * 0.08}>
-							<article className="flex gap-4 rounded-panel bg-muted p-5 transition duration-300 hover:-translate-y-1">
-								<span className="grid size-12 shrink-0 place-items-center rounded-2xl bg-brand-soft text-brand">
-									<point.icon className="size-5" />
-								</span>
-								<div>
-									<h3 className="font-semibold">{point.title}</h3>
-									<p className="mt-1 text-sm leading-relaxed text-muted-foreground">
-										{point.text}
-									</p>
-								</div>
-							</article>
-						</Reveal>
-					))}
-				</div>
+			<Reveal>
+				<SectionHeading
+					eyebrow="Sobre"
+					title="Do problema à tecnologia que resolve."
+					short="A gente escuta o problema e entrega a tecnologia que resolve."
+					text={
+						<>
+							<span className="block">
+								A Neverdevup escuta o que está travando o negócio e entrega a
+								tecnologia que resolve:
+							</span>
+							<span className="block">
+								sistemas, inteligência artificial, automação, CRM e sites. O
+								segmento muda.
+							</span>
+							<span className="block">
+								Escutar, combinar o escopo e construir algo usável.
+							</span>
+						</>
+					}
+				/>
+			</Reveal>
+			<div className="mt-6 grid gap-3 md:mt-10 lg:grid-cols-3 lg:items-stretch">
+				{points.map((point, index) => (
+					<Reveal key={point.title} delay={index * 0.08} className="h-full">
+						<article className="group flex h-full flex-col overflow-hidden rounded-panel bg-muted text-left transition duration-300 hover:-translate-y-1">
+							<div className="aspect-[16/10] shrink-0 overflow-hidden">
+								<img
+									src={point.image}
+									alt={point.alt}
+									width={1400}
+									height={875}
+									loading="lazy"
+									decoding="async"
+									className={`h-full w-full object-cover transition duration-500 group-hover:scale-[1.03] ${point.position}`}
+								/>
+							</div>
+							<div className="flex flex-1 flex-col p-3.5 md:p-5">
+								<h3 className="font-semibold">{point.title}</h3>
+								<p className="mt-1 text-sm leading-relaxed text-muted-foreground">
+									<MobileText short={point.short} text={point.text} />
+								</p>
+							</div>
+						</article>
+					</Reveal>
+				))}
 			</div>
 		</Panel>
 	);

@@ -2,11 +2,12 @@ import { Bot, Globe, Layers, Users, Zap } from "lucide-react";
 import type { LucideIcon } from "lucide-react";
 import { cn } from "../lib/utils";
 import { Reveal } from "./reveal";
-import { HexPattern, Panel, SectionHeading } from "./section";
+import { HexPattern, MobileText, Panel, SectionHeading } from "./section";
 
 type Service = {
 	icon: LucideIcon;
 	title: string;
+	short: string;
 	text: string;
 	tone: "dark" | "light";
 	span: "third" | "half";
@@ -16,6 +17,7 @@ const services: Service[] = [
 	{
 		icon: Layers,
 		title: "Sistemas",
+		short: "Feito em volta do problema da operação.",
 		text: "O sistema feito em volta do problema da operação, no lugar de uma ferramenta genérica.",
 		tone: "dark",
 		span: "third",
@@ -23,6 +25,7 @@ const services: Service[] = [
 	{
 		icon: Bot,
 		title: "IA",
+		short: "No atendimento, na análise e nas decisões.",
 		text: "Inteligência aplicada no atendimento, na análise e nas decisões que hoje dependem de alguém o tempo todo.",
 		tone: "light",
 		span: "third",
@@ -30,6 +33,7 @@ const services: Service[] = [
 	{
 		icon: Zap,
 		title: "Automação",
+		short: "O trabalho repetido vira fluxo.",
 		text: "O trabalho repetido vira fluxo. As pessoas ficam com o que pede julgamento.",
 		tone: "light",
 		span: "third",
@@ -37,6 +41,7 @@ const services: Service[] = [
 	{
 		icon: Users,
 		title: "CRM",
+		short: "Clientes e o próximo passo no mesmo lugar.",
 		text: "Clientes, histórico e o próximo passo no mesmo lugar, para a relação não se perder no caminho.",
 		tone: "light",
 		span: "half",
@@ -44,6 +49,7 @@ const services: Service[] = [
 	{
 		icon: Globe,
 		title: "Sites",
+		short: "Explica o negócio e leva até o contato.",
 		text: "A presença que explica o negócio e leva a pessoa até o contato, o sistema ou a venda.",
 		tone: "dark",
 		span: "half",
@@ -57,10 +63,20 @@ export function Services() {
 				<SectionHeading
 					eyebrow="Serviços"
 					title="A tecnologia certa para o problema"
-					text="Sistemas, IA, automação, CRM e sites. O formato muda. O ponto de partida é sempre o problema."
+					short="O ponto de partida é sempre o problema."
+					text={
+						<>
+							<span className="block">
+								O formato muda. O ponto de partida é sempre o problema.
+							</span>
+							<span className="mt-1 block">
+								Sistemas, IA, automação, CRM e sites.
+							</span>
+						</>
+					}
 				/>
 			</Reveal>
-			<div className="mt-10 grid gap-4 md:grid-cols-2 lg:grid-cols-6">
+			<div className="mt-6 grid gap-3 md:mt-10 md:grid-cols-2 md:gap-4 lg:grid-cols-6">
 				{services.map((service, index) => (
 					<Reveal
 						key={service.title}
@@ -73,7 +89,7 @@ export function Services() {
 					>
 						<article
 							className={cn(
-								"group relative h-full overflow-hidden rounded-panel p-6 transition duration-300 hover:-translate-y-1",
+								"group relative h-full overflow-hidden rounded-panel p-4 transition duration-300 hover:-translate-y-1 md:p-6",
 								service.tone === "dark"
 									? "bg-[linear-gradient(160deg,#17171d_0%,#2e2864_58%,#6263f1_145%)] text-white shadow-[0_18px_40px_-28px_rgba(98,99,241,0.8)]"
 									: "bg-[#f5f6fe] text-foreground dark:bg-white/[0.04]",
@@ -102,7 +118,9 @@ export function Services() {
 								>
 									<service.icon className="size-5" />
 								</span>
-								<h3 className="mt-5 text-xl font-semibold">{service.title}</h3>
+								<h3 className="mt-4 text-lg font-semibold md:mt-5 md:text-xl">
+									{service.title}
+								</h3>
 								<p
 									className={cn(
 										"mt-2 max-w-md text-sm leading-relaxed",
@@ -111,7 +129,7 @@ export function Services() {
 											: "text-muted-foreground",
 									)}
 								>
-									{service.text}
+									<MobileText short={service.short} text={service.text} />
 								</p>
 							</div>
 						</article>
